@@ -13,7 +13,7 @@ public class Main {
             }
         }
     }
-    //query2: Get all the studios names in witch plays the actor with name "actor cu 2 oscaruri"
+    //query2: Get all the studios names in which plays the actor with name "actor cu 2 oscaruri"
     public static void Query2(List<Studio> myList) {
         for(Studio studio : myList) {
             for(Film film : studio.getFilme()) {
@@ -25,7 +25,7 @@ public class Main {
             }
         }
     }
-    //query3: Get all the movie names in witch plays at least an actor with age above 50
+    //query3: Get all the movie names in which plays at least an actor with age above 50
     public static void Query3(List<Film> myList) {
         int count=0;
         for (Film movie : myList) {
@@ -73,9 +73,9 @@ public class Main {
 
         System.out.println("All studios names that have published more than 2 movies: ");
         Query1(studios);
-        System.out.println("All the studios names in witch plays the actor with name 'actor cu 2 oscaruri'");
+        System.out.println("All the studios names in which plays the actor with name 'actor cu 2 oscaruri'");
         Query2(studios);
-        System.out.println("All the movie names in witch plays at least an actor with age above 50");
+        System.out.println("All the movie names in which plays at least an actor with age above 50");
         Query3(movies);
 
     }
