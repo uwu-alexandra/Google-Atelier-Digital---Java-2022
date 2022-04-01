@@ -30,7 +30,6 @@ public class  Main{
 
         public static void String_compute2(int number) {
             StringBuilder output = new StringBuilder();
-            StringBuilder output1 = new StringBuilder();
             boolean enteredIfs = false;
             if (number % 3 == 0) {
                 output.append("Foo");
