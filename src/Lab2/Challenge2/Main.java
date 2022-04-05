@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+    /*
     //query1: Get all studios names that have published more than 2 movies
     public static void Query1(List<Studio> myList) {
         for (Studio studio : myList ) {
@@ -37,7 +38,7 @@ public class Main {
             }
         }
     }
-
+*/
     public static void main(String[] args) {
         Premiu oscar1990 = new Premiu("oscar", 1990);
         Premiu oscar2000 = new Premiu("oscar", 2000);
@@ -60,7 +61,32 @@ public class Main {
         Studio studio1 = new Studio("MGM", new Film[]{film1, film2});
         Studio studio2 = new Studio("Disney", new Film[]{film3, film4, film5});
 
-        List<Studio> studios = new ArrayList<>();
+        Studio[] studioDatabase = new Studio[] {studio1, studio2};
+
+        //query1: Get all studios names that have published more than 2 movies
+        System.out.println("All studios names that have published more than 2 movies: ");
+        for (Studio s : studioDatabase) {
+            if(s.getFilme().length > 2)
+                System.out.println(s.getNume());
+        }
+
+        //query2: Get all the studios names in which plays the actor with name "actor cu 2 oscaruri"
+        System.out.println("All the studios names in which plays the actor with name 'actor cu 2 oscaruri'");
+        for (Studio s : studioDatabase) {
+            if(s.getMovieByActor("Actor cu 2 oscaruri") != null) {
+                System.out.println(s.getNume());
+            }
+        }
+
+        //query3: Get all the movie names in which plays at least an actor with age above 50
+        System.out.println("All the movie names in which plays at least an actor with age above 50");
+        for (Studio s : studioDatabase) {
+            s.getMovieByActorAge(50);
+        }
+
+
+
+       /* List<Studio> studios = new ArrayList<>();
         studios.add(studio1);
         studios.add(studio2);
 
@@ -76,7 +102,7 @@ public class Main {
         System.out.println("All the studios names in which plays the actor with name 'actor cu 2 oscaruri'");
         Query2(studios);
         System.out.println("All the movie names in which plays at least an actor with age above 50");
-        Query3(movies);
+        Query3(movies); */
 
     }
 }

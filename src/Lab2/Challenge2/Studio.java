@@ -17,4 +17,18 @@ public class Studio {
         return filme;
     }
 
+    public Film getMovieByActor(String numeActor) {
+        for (Film movie : filme) {
+            if(movie.getActorsByName(numeActor) != null)
+                return movie;
+        }
+        return null;
+    }
+
+    public void getMovieByActorAge(int varstaActor) {
+        for (Film movie : filme) {
+            if (movie.getActorByAge(varstaActor) != null)
+                System.out.println(movie.getNume());
+        }
+    }
 }

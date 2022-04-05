@@ -18,4 +18,23 @@ public class Film {
     public Actor[] getActori() {
         return actori;
     }
+
+    public Actor getActorsByName(String numeActor) {
+        for (Actor act: actori) {
+            if (act.getNume().equals(numeActor)) {
+                return act;
+            }
+        }
+        return null;
+    }
+
+    public Actor getActorByAge(int varstaActor) {
+        for (Actor act: actori) {
+            if(act.getVarsta() >= varstaActor) {
+                return act;
+            }
+
+        }
+        return null;
+    }
 }
