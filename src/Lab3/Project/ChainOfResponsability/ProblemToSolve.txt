@@ -1,0 +1,2 @@
+Problem: Implementing a basic calculator which can perform basic operations like +, -, *, / .
+For this I used the Chain of Responsibility design pattern.
