@@ -1,0 +1,2 @@
+Problem: items you can buy don't have any taxes. Our job is to add taxes to them, but different types of items have different taxes;
+For this I used the Visitor design pattern;
