@@ -1,0 +1,12 @@
+you: 4
+do: 3
+is: 2
+rain: 2
+?: 1
+Do: 1
+How: 1
+are: 1
+going: 1
+think: 1
+to: 1
+today?: 1
